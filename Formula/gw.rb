@@ -1,28 +1,29 @@
 class Gw < Formula
   desc "Git stacked branch manager"
   homepage "https://github.com/jondeibel/git-workflow"
-  version "0.1.1"
+  version "0.1.2"
   if OS.mac?
     if Hardware::CPU.arm?
-      url "https://github.com/jondeibel/git-workflow/releases/download/v0.1.1/gw-aarch64-apple-darwin.tar.xz"
-      sha256 "402051636c34fe5c321ed79c0f4b9fa226079ff7fb00814ae0e4c9cfe0433763"
+      url "https://github.com/jondeibel/git-workflow/releases/download/v0.1.2/gw-aarch64-apple-darwin.tar.xz"
+      sha256 "d4ab051bad2937b8f592e18af0e6d7c3c8c20b11c474593a369a48c9c8b8da7f"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jondeibel/git-workflow/releases/download/v0.1.1/gw-x86_64-apple-darwin.tar.xz"
-      sha256 "bdd7c4a36c13ab65016e56afbddb0586ee90e8b92811ff08a63ac8fc566e5cc5"
+      url "https://github.com/jondeibel/git-workflow/releases/download/v0.1.2/gw-x86_64-apple-darwin.tar.xz"
+      sha256 "4ac32b54b0069cae1eea7f81cc6d6d33fa5843ee46a291b0888734b4ebccc627"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
-      url "https://github.com/jondeibel/git-workflow/releases/download/v0.1.1/gw-aarch64-unknown-linux-gnu.tar.xz"
-      sha256 "1145843965c268ceebbdc1b19a6b1933b25d4309ac05906defa051617fac4645"
+      url "https://github.com/jondeibel/git-workflow/releases/download/v0.1.2/gw-aarch64-unknown-linux-gnu.tar.xz"
+      sha256 "2016b2cfca518fcf0b56be7fc25950ccd2b388bfdb42d664b3f9128e7ef4aea8"
     end
     if Hardware::CPU.intel?
-      url "https://github.com/jondeibel/git-workflow/releases/download/v0.1.1/gw-x86_64-unknown-linux-gnu.tar.xz"
-      sha256 "4d9b092254e9edbfcff3840c70d5d7975fb4c6374bd7e34ed777f052c9ca32ac"
+      url "https://github.com/jondeibel/git-workflow/releases/download/v0.1.2/gw-x86_64-unknown-linux-gnu.tar.xz"
+      sha256 "989c34d1d46652e919800a21547fc5985469f70636311ae2e8c391d2634bd1a7"
     end
   end
   license "MIT"
+  depends_on "difftastic"
 
   BINARY_ALIASES = {
     "aarch64-apple-darwin":      {},
